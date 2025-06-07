@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Settings – STEAMScout</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .settings {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 2rem;
+    }
+
+    .settings h2 {
+      color: #A8E6CF;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">STEAMScout</div>
+      <ul>
+        <li><a href="home.html">Back to Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="settings">
+    <h2>Account Settings</h2>
+    <input type="text" id="name" placeholder="Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <button class="cta" onclick="saveSettings()">Save Changes</button>
+  </main>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem('user'));
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+    if (user) {
+      nameInput.value = user.name;
+      emailInput.value = user.email;
+    }
+
+    function saveSettings() {
+      const updatedUser = {
+        name: nameInput.value,
+        email: emailInput.value
+      };
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      alert('Settings saved.');
+      window.location.href = 'home.html';
+    }
+  </script>
+</body>
+</html>

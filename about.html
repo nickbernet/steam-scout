@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – STEAMScout</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      padding: 2rem;
+      background: #fdfdfd;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .about-block:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-image {
+      flex: 1;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 0.5rem;
+    }
+
+    .about-title {
+      font-size: 2rem;
+      color: #A8E6CF;
+      margin-bottom: 1rem;
+    }
+
+    .about-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">STEAMScout</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><button class="cta" onclick="location.href='signup.html'">Sign Up</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 style="text-align:center; margin-bottom: 3rem; color:#A8E6CF;">Why I Built STEAMScout</h1>
+
+    <div class="about-block">
+      <div class="about-text">
+        <h2 class="about-title">Frustration Sparked the Idea</h2>
+        <p class="about-paragraph">
+          While students were getting recruited for sports — with websites, highlight videos, and scouts — I was spending late nights on robotics builds, programming sensors, and troubleshooting 3D printers. I had real skills, but nowhere to showcase them.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://placehold.co/400x250?text=Nick+In+Robotics" alt="Placeholder image of robotics work" />
+      </div>
+    </div>
+
+    <div class="about-block">
+      <div class="about-text">
+        <h2 class="about-title">STEAM Talent Deserves Visibility</h2>
+        <p class="about-paragraph">
+          My name is Nick Bernet. I created STEAMScout because students building real-world solutions — whether in robotics, engineering, design, or research — need the same access to exposure and opportunity that athletes get.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://placehold.co/400x250?text=STEAM+Students" alt="Placeholder image of STEAM students" />
+      </div>
+    </div>
+
+    <div class="about-block">
+      <div class="about-text">
+        <h2 class="about-title">Not Just a Resume – A Platform</h2>
+        <p class="about-paragraph">
+          STEAMScout lets students show off their projects, certifications, and competition history in a real, visual format. It connects them with recruiters, college programs, and companies that value innovation and initiative.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://placehold.co/400x250?text=Digital+Portfolio" alt="Placeholder image of a student profile" />
+      </div>
+    </div>
+
+    <div class="about-block">
+      <div class="about-text">
+        <h2 class="about-title">The Vision Going Forward</h2>
+        <p class="about-paragraph">
+          This isn’t just a tool — it’s a movement. STEAMScout is about giving students the power to turn their talent into traction. If you’re serious about building your future through STEM or the arts, this is where you start.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://placehold.co/400x250?text=Future+Vision" alt="Placeholder image of future goals" />
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

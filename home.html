@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome – STEAMScout</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .dashboard {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .dashboard h2 {
+      font-size: 2rem;
+      color: #A8E6CF;
+      margin-bottom: 1rem;
+    }
+
+    .dashboard-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .preview-card {
+      background: #f8f8f8;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    .preview-card h3 {
+      color: #A8E6CF;
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-card p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background-color: #A8E6CF;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 0.75rem 1rem;
+      display: block;
+      text-align: left;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">STEAMScout</div>
+      <ul>
+        <li><a href="index.html">Explore</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">My Account</button>
+          <div class="dropdown-content">
+            <a href="portfolio.html">My Portfolio</a>
+            <a href="settings.html">Settings</a>
+            <a href="#" onclick="logout()">Log Out</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <h2>Welcome back, <span id="studentName">Student</span> 👋</h2>
+    <p>Here are some quick links to get started:</p>
+
+    <div class="dashboard-preview">
+      <div class="preview-card">
+        <h3>View My Portfolio</h3>
+        <p>A visual showcase of your skills, projects, certifications, and competitions.</p>
+        <button class="cta" onclick="location.href='portfolio.html'">Open Portfolio</button>
+      </div>
+
+      <div class="preview-card">
+        <h3>Find Opportunities</h3>
+        <p>Recommended internships, programs, and scholarships tailored to your profile.</p>
+        <button class="cta" disabled>Coming Soon</button>
+      </div>
+
+      <div class="preview-card">
+        <h3>Join a Program</h3>
+        <p>Apply to join special events, summer camps, or mentorship groups.</p>
+        <button class="cta" disabled>Coming Soon</button>
+      </div>
+
+      <div class="preview-card">
+        <h3>Edit My Profile</h3>
+        <p>Update your name, email, and settings — all saved locally for now.</p>
+        <button class="cta" onclick="location.href='settings.html'">Open Settings</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+      window.location.href = 'index.html';
+    } else {
+      document.getElementById('studentName').textContent = user.name;
+    }
+
+    function logout() {
+      localStorage.removeItem('user');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
