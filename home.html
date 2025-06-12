@@ -27,18 +27,21 @@
 
     .card-grid {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: space-between;
       gap: 2rem;
+      flex-wrap: wrap;
     }
 
     .card {
+      flex: 1;
+      min-width: 300px;
       background-color: #f9f9f9;
       padding: 2rem;
       border-radius: 1.5rem;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-      max-width: 320px;
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       transition: transform 0.2s ease;
     }
 
@@ -55,7 +58,8 @@
     .card p {
       color: #333;
       font-size: 0.95rem;
-      margin-bottom: 1.5rem;
+      flex-grow: 1;
+      margin-bottom: 2rem;
     }
 
     .card button {
@@ -76,6 +80,13 @@
     .coming-soon {
       background-color: #A8E6CF;
       opacity: 0.8;
+    }
+
+    @media (max-width: 900px) {
+      .card-grid {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
