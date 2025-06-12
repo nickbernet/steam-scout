@@ -1,43 +1,36 @@
 # STEAMScout
 
-**STEAMScout** is a student-centered recruiting platform built to showcase STEM talent in a clean, modern format — inspired by how student-athletes use NCSA. It helps students build portfolios, find opportunities, and connect with mentors, colleges, and companies.
+**STEAMScout** is a modern recruiting platform for high school STEM students. Built with the same idea as athlete recruitment tools like NCSA, STEAMScout allows students to showcase their skills, projects, and experience in a centralized, professional format.
 
-![STEAMScout banner](https://your-screenshot-or-banner-link-if-you-have-one)
-
----
-
-## 🔍 Purpose
-
-STEM students deserve the same exposure and recruiting tools as athletes. STEAMScout makes it easy to:
-
-- Create a professional STEM profile
-- Showcase projects, competitions, certifications, and skills
-- Share personal updates and learning milestones
-- Connect with organizations looking for emerging talent
+> 🌐 Live site: [https://steamscout.org](https://steamscout.org)
 
 ---
 
-## 🚀 Features
+## 📌 Why It Exists
 
-- Portfolio builder with progress-style prompts
-- Modern UI using HTML/CSS/JavaScript
-- Responsive design with light green, white, and purple palette
-- Profile sections: general info, experience, skills, projects, updates
-- Recruiter dashboard and program listings (in progress)
+I'm **Nick Bernet**, a robotics student who saw athletes getting recruited while STEM students like me had nowhere to showcase what we built.  
+So I built STEAMScout — a clean, useful site where students can present real work and connect to opportunity.
 
 ---
 
-## 🌐 View the Site
+## 🔑 Features
 
-Once GitHub Pages is enabled:
+- 🧾 **Custom Portfolios**  
+  Track experience, education, certifications, and competitions
 
-**Live URL:**  
-`https://nickbernet.github.io/steam-scout/`
+- 🔨 **Projects & Skills Showcase**  
+  Add technical projects with links, descriptions, and images
+
+- 💬 **Activity Feed**  
+  Post updates and progress like a STEM-focused social stream
+
+- ⚙️ **Settings Dashboard**  
+  Edit personal info, update portfolio sections, and manage account visibility
+
+- 📱 **Fully Front-End MVP**  
+  Built with HTML, CSS, and JavaScript – no backend required
 
 ---
 
-## 🛠 How to Run Locally
+## 📂 File Structure
 
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/nickbernet/steam-scout.git
