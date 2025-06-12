@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>STEAMScout</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo">STEAMScout</div>
+      <div class="logo">STEAM<span style="color:#A8E6CF;">Scout</span></div>
       <ul>
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="about.html">About</a></li>
@@ -20,38 +20,46 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
+    <!-- Hero -->
+    <section class="hero" style="background-color: #f6fffc; padding: 5rem 2rem; text-align: center;">
       <div class="hero-content">
-        <h1>Turn Your STEAM Skills Into Real Opportunities</h1>
-        <p>Showcase your projects, get discovered by universities, and launch your future with confidence.</p>
+        <h1>Turn Your STEAM Skills Into<br />Real Opportunities</h1>
+        <p>Showcase your projects, get discovered by universities, and launch<br />your future with confidence.</p>
         <button class="cta" onclick="location.href='signup.html'">Create Your Free Profile</button>
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="section features">
-      <h2>Core Features</h2>
-      <div class="feature-grid">
-        <div class="feature">
-          <h3>Custom Profiles</h3>
-          <p>Build rich, branded pages to showcase projects, skills and achievements.</p>
+    <!-- Core Features -->
+    <section class="section features" style="text-align: center;">
+      <h2 style="color: #E0BBE4; margin-bottom: 2rem;">Core Features</h2>
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
+
+        <div style="background: #f8f8f8; padding: 2rem; border-radius: 2rem; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <h3 style="color: #333; margin-bottom: 1rem;">Custom Profiles</h3>
+          <p>Build rich, branded pages to showcase projects, skills, and achievements.</p>
         </div>
-        <div class="feature">
-          <h3>Competition Tracker</h3>
+
+        <div style="background: #f8f8f8; padding: 2rem; border-radius: 2rem; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <h3 style="color: #333; margin-bottom: 1rem;">Competition Tracker</h3>
           <p>Log FTC, FRC, Science Olympiad and hackathon history in one place.</p>
         </div>
-        <div class="feature">
-          <h3>Opportunity Match</h3>
+
+        <div style="background: #f8f8f8; padding: 2rem; border-radius: 2rem; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <h3 style="color: #333; margin-bottom: 1rem;">Opportunity Match</h3>
           <p>Get matched to internships, scholarships, and freelance gigs in STEM.</p>
         </div>
+
       </div>
     </section>
 
-    <!-- WELCOME -->
-    <section id="welcome" class="section" style="text-align: center;">
-      <h2>Welcome Back</h2>
-      <p id="welcomeMsg">You are not logged in.</p>
+    <!-- Welcome Section -->
+    <section id="welcome" style="margin-top: 4rem; padding: 3rem 2rem; text-align: center; background: #f8f8f8; border-top: 1px solid #eee;">
+      <div style="max-width: 600px; margin: auto;">
+        <h2 style="margin-bottom: 1rem;">Welcome to STEAMScout</h2>
+        <p style="font-size: 1.1rem; color: #666;">
+          You are currently not logged in. <a href="login.html" style="color: #A8E6CF; font-weight: bold;">Log in here</a> to access your portfolio.
+        </p>
+      </div>
     </section>
   </main>
 
