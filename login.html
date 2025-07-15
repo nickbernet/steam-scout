@@ -2,92 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Log In | STEAMScout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Log In – STEAMScout</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .login-container {
-      max-width: 400px;
-      margin: 6rem auto;
-      padding: 3rem 2rem;
-      background: #fff;
-      border-radius: 1.5rem;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      text-align: center;
-    }
-
-    .login-container h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .login-container input {
-      width: 100%;
-      padding: 0.75rem;
-      margin: 0.75rem 0;
-      border: 1px solid #ccc;
-      border-radius: 0.75rem;
-      font-size: 1rem;
-    }
-
-    .login-container button {
-      width: 100%;
-      background-color: #A8E6CF;
-      color: white;
-      border: none;
-      border-radius: 2rem;
-      padding: 0.75rem;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 1rem;
-      transition: background 0.3s ease;
-    }
-
-    .login-container button:hover {
-      background-color: #8DDDB7;
-    }
-
-    .login-container p {
-      margin-top: 1.5rem;
-      font-size: 0.95rem;
-      color: #444;
-    }
-
-    .login-container a {
-      color: #A68ACB;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .login-container a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo">STEAM<span style="color:#A8E6CF;">Scout</span></div>
+      <div class="logo">STEAMScout</div>
       <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="login.html">Log In</a></li>
-        <li><button class="cta" onclick="location.href='signup.html'">Sign Up</button></li>
+        <li><a href="signup.html">Sign Up</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <div class="login-container">
-      <h2>Log In</h2>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Log In</button>
-      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-    </div>
+  <main class="section" style="max-width: 400px; margin: auto;">
+    <h1>Log In</h1>
+    <form id="login-form">
+      <input type="email" name="email" id="email" placeholder="Email" style="width: 100%; margin: 1rem 0; padding: 0.75rem;" />
+      <input type="password" name="password" id="password" placeholder="Password" style="width: 100%; margin: 1rem 0; padding: 0.75rem;" />
+      <button type="submit" class="cta" style="width: 100%;">Log In</button>
+    </form>
+
+    <button id="google-signin" type="button" class="cta" style="width: 100%; margin-top: 1rem;">
+      Sign in with Google
+    </button>
+
+    <p style="text-align: center; margin-top: 1rem;">
+      Don't have an account? <a href="signup.html">Sign up</a>
+    </p>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <script type="module" src="/firebase-config.js"></script>
+  <script type="module" src="/auth.js"></script>
 </body>
 </html>

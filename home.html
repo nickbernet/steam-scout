@@ -130,6 +130,23 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Firebase core + Auth SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+
+  <!-- Your config and user state logic -->
+  <script type="module">
+    import { auth } from './firebase-config.js';
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+
+    onAuthStateChanged(auth, (user) => {
+      const heading = document.querySelector('.dashboard-container h2');
+      if (user) {
+        heading.textContent = `Welcome back, ${user.email}!`;
+      } else {
+        heading.textContent = `Welcome back, 👋 Please log in.`;
+      }
+    });
+  </script>
 </body>
 </html>

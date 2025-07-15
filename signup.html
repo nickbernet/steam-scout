@@ -21,21 +21,33 @@
 
   <main class="section" style="max-width: 400px; margin: auto;">
     <h1>Sign Up</h1>
-    <select style="width: 100%; margin: 1rem 0; padding: 0.75rem;">
-      <option value="">Select your role</option>
-      <option>Student</option>
-      <option>Recruiter</option>
-      <option>Company</option>
-    </select>
-    <input type="text" placeholder="Name" style="width: 100%; margin: 1rem 0; padding: 0.75rem;" />
-    <input type="email" placeholder="Email" style="width: 100%; margin: 1rem 0; padding: 0.75rem;" />
-    <input type="password" placeholder="Password" style="width: 100%; margin: 1rem 0; padding: 0.75rem;" />
-    <button class="cta" style="width: 100%;">Create Profile</button>
+    <form id="signup-form">
+      <select name="role" style="width: 100%; margin: 1rem 0; padding: 0.75rem;">
+        <option value="">Select your role</option>
+        <option>Student</option>
+        <option>Recruiter</option>
+        <option>Company</option>
+      </select>
+
+      <input type="text" name="name" id="name" placeholder="Name" style="width: 100%; margin: 1rem 0; padding: 0.75rem;" />
+      <input type="email" name="email" id="email" placeholder="Email" style="width: 100%; margin: 1rem 0; padding: 0.75rem;" />
+      <input type="password" name="password" id="password" placeholder="Password" style="width: 100%; margin: 1rem 0; padding: 0.75rem;" />
+      <button type="submit" class="cta" style="width: 100%;">Create Profile</button>
+    </form>
+
+    <button id="google-signin" type="button" class="cta" style="width: 100%; margin-top: 1rem;">
+      Sign up with Google
+    </button>
+
     <p style="text-align: center; margin-top: 1rem;">
       Already have an account? <a href="login.html">Log in</a>
     </p>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <script type="module" src="/firebase-config.js"></script>
+  <script type="module" src="/auth.js"></script>
 </body>
 </html>
